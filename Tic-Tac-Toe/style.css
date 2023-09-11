@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  background: #348F50;
+  background: -webkit-linear-gradient(to right, #56B4D3, #348F50);
+  background: linear-gradient(to right, #56B4D3, #348F50);
+}
+
+.gridWithGameBoxes {
+  background-color: rgba(255, 255, 255, 0.842);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 40em;
+  height: 70vh;
+  margin: 0 auto;
+  border-color: none;
+  -webkit-box-shadow: -2px 2px 22px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 2px 22px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 2px 22px 0px rgba(0, 0, 0, 0.75);
+}
+
+.game-grid-box {
+  border: 1px solid rgba(184, 184, 184, 0.795);
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.cross {
+  background-image: url("./icons/green_cross.png");
+}
+
+.zero {
+  background-image: url("./icons/red_circle.png");
+}
+
+.cross,
+.zero {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-position: center center
+}
+
+.empty:focus,
+.empty:hover {
+  background-color: rgba(41, 206, 69, 0.644);
+}
+
+.stateOfWinner,
+.newGameButtons {
+  color: rgb(68, 68, 68);
+}
+
+.stateOfWinner {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.newGameButtons {
+  font-size: 1.5rem;
+  display: block;
+  margin: 2em auto;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.842);
+  border-radius: 5px;
+  padding: 0.5em 1em;
+}
+
+.newGameButtons:hover {
+  background-color: rgb(225, 225, 225);
+}
+
+.mainNewGameButton {
+  -webkit-box-shadow: -2px 2px 22px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 2px 22px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 2px 22px 0px rgba(0, 0, 0, 0.75);
+}
+
+.dialogueNewGameButton {
+  outline: 1px solid rgb(156, 156, 156);
+  color: rgb(68, 68, 68);
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+dialog {
+  border: solid 1px rgb(156, 156, 156);
+  width: 300px;
+  opacity: 0.92;
+  border-radius: 5px;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(2px);
+}
