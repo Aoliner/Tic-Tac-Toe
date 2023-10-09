@@ -21,9 +21,6 @@ let winLineUser = []
 let gameGridBoxes
 let boxClasses
 
-///const 2
-// score 
-//add stick?
 for (let i = 0; i < NUMBER_OF_GAME_BOXES; i++) {
   const gameGridBox = document.createElement("div")
   gameGridBox.classList.add("game-grid-box", GAME_BOX_EMPTY, i)
